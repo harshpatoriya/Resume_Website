@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS for social media icons and mode toggle icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+      }
+      .content {
+        padding: 20px;
+      }
+      .about-photo {
+        max-width: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .education-logo {
+        max-width: 50px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .education-section {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center; /* Center items vertically */
+      }
+      .education-details {
+        flex: 1; /* Take up remaining space */
+      }
+      .project-section {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap; /* Ensure projects wrap nicely */
+      }
+      .project-details {
+        flex: 1 1 100%; /* Flex properties for responsiveness */
+        max-width: calc(33.33% - 20px); /* Adjust max-width based on layout */
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+        .project-details {
+          max-width: 100%; /* Full width on smaller screens */
+        }
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .social-icons a {
+        margin: 0 10px;
+        color: #000;
+        font-size: 24px;
+      }
+      .dark-mode {
+        background-color: #343a40;
+        color: #ffffff;
+      }
+      .dark-mode .navbar {
+        background-color: #000000;
+      }
+      .dark-mode .social-icons a {
+        color: #ffffff;
+      }
+
+      /* Media query for dark mode icon visibility */
+      @media (min-width: 412px) and (max-height: 915px) {
+        #modeToggle {
+          display: inline-block;
+        }
+      }
+      @media (max-width: 411px) {
+        #modeToggle {
+          display: none;
+        }
+      }
+
+      @media (max-width: 412px) and (max-height: 915px) {
+        .about-photo {
+          max-width: 100px;
+        }
+        .education-logo {
+          max-width: 40px;
+        }
+        .project-details {
+          max-width: 100%;
+        }
+        .social-icons a {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item" id="modeToggle">
+            <a class="nav-link" href="#"><i class="fas fa-moon"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Photo -->
+    <div class="text-center">
+      <img src="photo.jpg" alt="Your Photo" class="about-photo" />
+    </div>
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Education Section -->
+      <section id="education">
+        <h3>Education</h3>
+        <div class="education-section">
+          <img src="vnsgu.jpg" alt="VNSGU Logo" class="education-logo" />
+          <div class="education-details">
+            <h6><b>Veer Narmad South Gujarat University, Surat</b></h6>
+            <p>Bachelor's in Computer Application<br />2022 - 2025</p>
+          </div>
+        </div>
+        <div class="education-section">
+          <img src="lpd.png" alt="LPD Logo" class="education-logo" />
+          <div class="education-details">
+            <h6><b>SMT L.P.D. Patel Sarvajanik Vidhyalaya</b></h6>
+            <p>
+              12 <sup>th</sup> Standard<br />2021 - 2022 <br />Grade: 93.28%
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="project-section">
+          <div class="project-details">
+            <h5><b>Simon Game</b></h5>
+            <p>
+              Challenge your memory and reflexes in this dynamic Simon game.
+              Built with HTML, CSS, and JavaScript, it features vibrant color
+              sequences, increasing difficulty levels, and a sleek, responsive
+              UI. Can you beat the highest score?
+            </p>
+            <a href="https://github.com/harshpatoriya/Simon-Game" target="_blank"
+              >View on GitHub</a
+            ><br>
+            <a href="https://simon-game-two-lime.vercel.app/" target="_blank"
+              >View on Live</a
+            >
+          </div>
+          <div class="project-details">
+            <h5><b>Brand X (Chair Shop)</b></h5>
+            <p>
+                Developed a classic Brand X using HTML, CSS. 
+                &bull; Implemented responsive web design principles to ensure compatibility across various devices and screen sizes.
+            </p>
+            <a href="https://github.com/harshpatoriya/Brand-X" target="_blank"
+              >View on GitHub</a
+            ><br>
+            <a href="https://brand-x.vercel.app/" target="_blank"
+              >View on Live</a
+            >
+          </div>
+          <div class="project-details">
+            <h5><b>Tic Tac Toe</b></h5>
+            <p>
+              Go beyond the basics with this enhanced Tic Tac Toe game. Built
+              with HTML, CSS, and JavaScript, it offers an AI opponent with
+              multiple difficulty levels to test your strategic skills. Can you
+              outsmart the AI?
+            </p>
+            <a href="https://github.com/harshpatoriya/Tic-Tac-Toe" target="_blank"
+              >View on GitHub</a
+            ><br>
+            <a href="https://tic-tac-toe-six-gilt.vercel.app/" target="_blank"
+              >View on Live</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about">
+        <h3>About Us</h3>
+
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/harsh-patoriya-089630249/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://x.com/PatoriyaHarsh" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://github.com/harshpatoriya" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document
+        .getElementById("modeToggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+          var icon = document.querySelector("#modeToggle i");
+          if (document.body.classList.contains("dark-mode")) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+          } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+          }
+        });
+    </script>
+  </body>
+</html>

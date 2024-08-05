@@ -1,0 +1,97 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .about-photo {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .education-logo {
+    max-width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .education-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+  
+  .education-details {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .project-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure projects wrap nicely */
+  }
+  
+  .project-details {
+    flex: 1 1 100%; /* Flex properties for responsiveness */
+    max-width: calc(33.33% - 20px); /* Adjust max-width based on layout */
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .project-details {
+      max-width: 100%; /* Full width on smaller screens */
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: #000;
+    font-size: 24px;
+  }
+  
+  .dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #000000;
+  }
+  
+  .dark-mode .social-icons a {
+    color: #ffffff;
+  }
+  
+  @media (max-width: 412px) and (max-height: 915px) {
+    .about-photo {
+      max-width: 100px;
+    }
+  
+    .education-logo {
+      max-width: 40px;
+    }
+  
+    .project-details {
+      max-width: 100%;
+    }
+  
+    .social-icons a {
+      font-size: 20px;
+    }
+  }
+  

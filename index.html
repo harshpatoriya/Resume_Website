@@ -15,90 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <!-- Custom CSS -->
-    <style>
-      body {
-        background-color: #f8f9fa;
-        font-family: Arial, sans-serif;
-      }
-      .content {
-        padding: 20px;
-      }
-      .about-photo {
-        max-width: 150px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .education-logo {
-        max-width: 50px;
-        vertical-align: middle;
-        margin-right: 10px;
-      }
-      .education-section {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center; /* Center items vertically */
-      }
-      .education-details {
-        flex: 1; /* Take up remaining space */
-      }
-      .project-section {
-        margin-bottom: 20px;
-        display: flex;
-        flex-wrap: wrap; /* Ensure projects wrap nicely */
-      }
-      .project-details {
-        flex: 1 1 100%; /* Flex properties for responsiveness */
-        max-width: calc(33.33% - 20px); /* Adjust max-width based on layout */
-        margin-right: 20px;
-        margin-bottom: 20px;
-      }
-      @media (max-width: 768px) {
-        .project-details {
-          max-width: 100%; /* Full width on smaller screens */
-        }
-      }
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      .social-icons a {
-        margin: 0 10px;
-        color: #000;
-        font-size: 24px;
-      }
-      .dark-mode {
-        background-color: #343a40;
-        color: #ffffff;
-      }
-      .dark-mode .navbar {
-        background-color: #000000;
-      }
-      .dark-mode .social-icons a {
-        color: #ffffff;
-      }
-
-     
-
-      @media (max-width: 412px) and (max-height: 915px) {
-        .about-photo {
-          max-width: 100px;
-        }
-        .education-logo {
-          max-width: 40px;
-        }
-        .project-details {
-          max-width: 100%;
-        }
-        .social-icons a {
-          font-size: 20px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -134,7 +51,10 @@
     </nav>
     <!-- Photo -->
     <div class="text-center">
-      <img src="photo.jpg" alt="Your Photo" class="about-photo" />
+      <img src="img/photo.jpg" alt="Your Photo" class="about-photo" />
+    </div>
+    <div>
+      <h3>&nbsp;&nbsp;&nbsp;Hey, i'm Harsh Patoriya</h3>
     </div>
     <!-- Main Content -->
     <div class="content">
@@ -142,14 +62,14 @@
       <section id="education">
         <h3>Education</h3>
         <div class="education-section">
-          <img src="vnsgu.jpg" alt="VNSGU Logo" class="education-logo" />
+          <img src="img/vnsgu.jpg" alt="VNSGU Logo" class="education-logo" />
           <div class="education-details">
             <h6><b>Veer Narmad South Gujarat University, Surat</b></h6>
             <p>Bachelor's in Computer Application<br />2022 - 2025</p>
           </div>
         </div>
         <div class="education-section">
-          <img src="lpd.png" alt="LPD Logo" class="education-logo" />
+          <img src="img/lpd.png" alt="LPD Logo" class="education-logo" />
           <div class="education-details">
             <h6><b>SMT L.P.D. Patel Sarvajanik Vidhyalaya</b></h6>
             <p>
@@ -171,9 +91,11 @@
               sequences, increasing difficulty levels, and a sleek, responsive
               UI. Can you beat the highest score?
             </p>
-            <a href="https://github.com/harshpatoriya/Simon-Game" target="_blank"
+            <a
+              href="https://github.com/harshpatoriya/Simon-Game"
+              target="_blank"
               >View on GitHub</a
-            ><br>
+            ><br />
             <a href="https://simon-game-two-lime.vercel.app/" target="_blank"
               >View on Live</a
             >
@@ -181,12 +103,13 @@
           <div class="project-details">
             <h5><b>Brand X (Chair Shop)</b></h5>
             <p>
-                Developed a classic Brand X using HTML, CSS. 
-                Implemented responsive web design principles to ensure compatibility across various devices and screen sizes.
+              Developed a classic Brand X using HTML, CSS. Implemented
+              responsive web design principles to ensure compatibility across
+              various devices and screen sizes.
             </p>
             <a href="https://github.com/harshpatoriya/Brand-X" target="_blank"
               >View on GitHub</a
-            ><br>
+            ><br />
             <a href="https://brand-x.vercel.app/" target="_blank"
               >View on Live</a
             >
@@ -199,9 +122,11 @@
               multiple difficulty levels to test your strategic skills. Can you
               outsmart the AI?
             </p>
-            <a href="https://github.com/harshpatoriya/Tic-Tac-Toe" target="_blank"
+            <a
+              href="https://github.com/harshpatoriya/Tic-Tac-Toe"
+              target="_blank"
               >View on GitHub</a
-            ><br>
+            ><br />
             <a href="https://tic-tac-toe-six-gilt.vercel.app/" target="_blank"
               >View on Live</a
             >
@@ -233,20 +158,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      document
-        .getElementById("modeToggle")
-        .addEventListener("click", function () {
-          document.body.classList.toggle("dark-mode");
-          var icon = document.querySelector("#modeToggle i");
-          if (document.body.classList.contains("dark-mode")) {
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
-          } else {
-            icon.classList.remove("fa-sun");
-            icon.classList.add("fa-moon");
-          }
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
